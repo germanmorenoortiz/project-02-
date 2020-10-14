@@ -2,7 +2,7 @@ import React from "react";
 
 export const Informacion = (space) => {
   let text = "";
-  if (space.success == true) text = "Si";
+  if (space.success === true) text = "Yes";
   else text = "No";
   return (
     <article>
@@ -10,10 +10,10 @@ export const Informacion = (space) => {
       <h2>{space.name}</h2>
 
       <p>{space.details}</p>
-      <h3>Mas información</h3>
+      <h3>More Info</h3>
       <ul>
-        <li>Exito: {text}</li>
-        <li>Código de vuelo: {space.flight_number}</li>
+        <li>Success: {text}</li>
+        <li>Fly Code: {space.flight_number}</li>
         <li>ID: {space.id}</li>
       </ul>
     </article>
