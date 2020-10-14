@@ -6,10 +6,3 @@
     animation: flash 1s infinite alternate linear;
   }
 }
-
-@keyframes flash {
-  to {
-    background-color: red;
-    color: white;
-  }
-}
