@@ -16,6 +16,7 @@ const Last = () => {
   return (
     <main>
       <h1>Last New</h1>
+      <hr />
       <Informacion {...data} />
     </main>
   );

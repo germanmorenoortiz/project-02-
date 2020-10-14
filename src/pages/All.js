@@ -16,6 +16,7 @@ const All = () => {
   return (
     <main>
       <h1>All News</h1>
+      <hr />
       {pack.map((space) => (
         <Informacion {...space} />
       ))}
