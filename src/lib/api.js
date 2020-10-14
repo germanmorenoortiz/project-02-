@@ -6,6 +6,7 @@ export const Informacion = (space) => {
   else text = "No";
   return (
     <article>
+      <hr />
       <h2>{space.name}</h2>
 
       <p>{space.details}</p>

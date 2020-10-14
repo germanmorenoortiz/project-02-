@@ -16,6 +16,7 @@ const Ten = () => {
   return (
     <main>
       <h1>Last 10 News</h1>
+      <hr />
       {pack.map((space) => (
         <Informacion {...space} />
       ))}
