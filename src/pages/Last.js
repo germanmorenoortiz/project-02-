@@ -13,10 +13,12 @@ const Last = () => {
     fetchSpace();
   }, []);
 
+  // Espera que reciba los datos para evitar errores.
+  if (data.length === 0) return null;
+
   return (
     <main>
       <h1>Last New</h1>
-      <hr />
       <Informacion {...data} />
     </main>
   );
