@@ -1,4 +1,5 @@
 import React from "react";
+import ReactPlayer from "react-player";
 
 export const Informacion = (space) => {
   let text, wiki, you;
@@ -17,8 +18,13 @@ export const Informacion = (space) => {
     <>
       <hr />
       <article>
+        <img
+          src={space.links.flickr.original[0]}
+          alt="Sin Foto"
+          width="250"
+          height="200px"
+        />
         <h2>{space.name}</h2>
-
         <p>{space.details}</p>
         <h3>More Info</h3>
         <ul>
@@ -35,6 +41,12 @@ export const Informacion = (space) => {
             <a href={space.links.webcast}>{you}</a>
           </li>
         </ul>
+        <ReactPlayer
+          url={space.links.webcast}
+          className="react-player"
+          width="640px"
+          height="480px"
+        />
       </article>
     </>
   );
