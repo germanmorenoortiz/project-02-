@@ -1,6 +1,8 @@
-.page {
+article {
   flex: 1 auto;
   padding: 0 1.25rem;
+  padding-right: 100px;
+  padding-left: 100px;
 
   &.error {
     animation: flash 1s infinite alternate linear;
