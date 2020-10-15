@@ -13,6 +13,9 @@ const Ten = () => {
     fetchSpace();
   }, []);
 
+  // Espera que reciba los datos para evitar errores.
+  if (pack.length === 0) return null;
+
   return (
     <main>
       <h1>Last 10 News</h1>

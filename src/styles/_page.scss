@@ -3,7 +3,18 @@ article {
   padding: 0 1.25rem;
   padding-right: 100px;
   padding-left: 100px;
-
+  a:link {
+    color: rgb(0, 195, 255);
+  }
+  a:visited {
+    color: rgb(0, 110, 255);
+  }
+  a:hover {
+    color: rgb(0, 156, 204);
+  }
+  a:active {
+    color: azure;
+  }
   &.error {
     animation: flash 1s infinite alternate linear;
   }
