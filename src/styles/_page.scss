@@ -1,8 +1,14 @@
 article {
   flex: 1 auto;
-  padding: 0 1.25rem;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding: 3rem;
+  border: 5px solid rgba(71, 106, 139, 0.75);
+  margin: 2rem;
+  background-color: rgba(71, 106, 139, 0.5);
+
+  h2 {
+    text-decoration: underline;
+  }
+
   a:link {
     color: rgb(0, 195, 255);
   }
@@ -14,8 +20,5 @@ article {
   }
   a:active {
     color: azure;
-  }
-  &.error {
-    animation: flash 1s infinite alternate linear;
   }
 }

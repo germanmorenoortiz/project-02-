@@ -1,20 +1,20 @@
-import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header>
-      <h1>Space News</h1>
+      <h1>SpaceX News</h1>
       <nav>
         <ul>
           <li>
-            <Link to="/">New</Link>
+            <Link to="/">Last New</Link>
           </li>
           <li>
-            <Link to="/ten">Ten</Link>
+            <Link to="/ten">Last Ten News</Link>
           </li>
           <li>
-            <Link to="/all">All</Link>
+            <Link to="/all">All News</Link>
           </li>
         </ul>
       </nav>

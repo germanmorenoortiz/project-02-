@@ -1,95 +1,109 @@
-import React from "react";
-import ReactPlayer from "react-player";
+import React from 'react';
+import ReactPlayer from 'react-player';
 
 export const Informacion = (space) => {
   let text;
 
-  if (space.success === true) text = "Yes";
-  else text = "No";
+  if (space.success === true) text = 'Yes';
+  else text = 'No';
 
   return (
-    <>
-      <hr />
-      <article>
-        {space.links.flickr.original[0] && (
-          <img
+    <article>
+      {space.links.flickr.original[0] && (
+        <img
           src={space.links.flickr.original[0]}
           alt="Sin Foto"
           width="250"
           height="200px"
-          />
+        />
+      )}
+      <h2>{space.name}</h2>
+      <p>{space.details}</p>
+      <h3>More Info:</h3>
+      <ul>
+        <li>Success: {text}</li>
+        <li>Fly Code: {space.flight_number}</li>
+        <li>ID: {space.id}</li>
+        <li>Date: {space.date_utc.slice(0, 10)}</li>
+        {space.links.wikipedia && (
+          <li>
+            Wikipedia:{' '}
+            <a href={space.links.wikipedia}>{space.links.wikipedia}</a>
+          </li>
         )}
-        <h2>{space.name}</h2>
-        <p>{space.details}</p>
-        <h3>More Info</h3>
-        <ul>
-          <li>Success: {text}</li>
-          <li>Fly Code: {space.flight_number}</li>
-          <li>ID: {space.id}</li>
-          {space.links.wikipedia && (
-            <li>
-            Wikipedia: <a href={space.links.wikipedia}>{space.links.wikipedia}</a>
-            </li>
-          )}
-        </ul>
-        {space.links.webcast && (
-          <>
-          <h3>Video</h3>
+      </ul>
+      {space.links.webcast && (
+        <>
+          <h3>Video:</h3>
           <ReactPlayer
             url={space.links.webcast}
             className="react-player"
             width="640px"
             height="480px"
-            />
-          </>
-        )}
-        {(space.links.reddit.campaign || space.links.reddit.launch || space.links.reddit.media || space.links.reddit.recovery) && (
-          <>
-        <h3>Reddit</h3>
-        <ul>
-          {space.links.reddit.campaign && (
-            <li>
-                Campaign: <a href={space.links.reddit.campaign}>{space.links.reddit.campaign}</a>
-            </li>
-          )}
-          {space.links.reddit.launch && (
-            <li>
-                Launch: <a href={space.links.reddit.launch}>{space.links.reddit.launch}</a>
-            </li>
-          )}
-          {space.links.reddit.media && (
-            <li>
-                Media: <a href={space.links.reddit.media}>{space.links.reddit.media}</a>
-            </li>
-          )}
-          {space.links.reddit.recovery && (
-            <li>
-                Recovery: <a href={space.links.reddit.recovery}>{space.links.reddit.recovery}</a>
-                </li>
-          )}
-            </ul>
-            </>
-        )}
-      </article>
-    </>
+          />
+        </>
+      )}
+      {(space.links.reddit.campaign ||
+        space.links.reddit.launch ||
+        space.links.reddit.media ||
+        space.links.reddit.recovery) && (
+        <>
+          <h3>Reddit:</h3>
+          <ul>
+            {space.links.reddit.campaign && (
+              <li>
+                Campaign:{' '}
+                <a href={space.links.reddit.campaign}>
+                  {space.links.reddit.campaign}
+                </a>
+              </li>
+            )}
+            {space.links.reddit.launch && (
+              <li>
+                Launch:{' '}
+                <a href={space.links.reddit.launch}>
+                  {space.links.reddit.launch}
+                </a>
+              </li>
+            )}
+            {space.links.reddit.media && (
+              <li>
+                Media:{' '}
+                <a href={space.links.reddit.media}>
+                  {space.links.reddit.media}
+                </a>
+              </li>
+            )}
+            {space.links.reddit.recovery && (
+              <li>
+                Recovery:{' '}
+                <a href={space.links.reddit.recovery}>
+                  {space.links.reddit.recovery}
+                </a>
+              </li>
+            )}
+          </ul>
+        </>
+      )}
+    </article>
   );
 };
 
 export const getLastNew = async () => {
-  const response = await fetch("https://api.spacexdata.com/v4/launches/latest");
+  const response = await fetch('https://api.spacexdata.com/v4/launches/latest');
   const data = await response.json();
   return data;
 };
 
 export const getAllNews = async () => {
-  const response = await fetch("https://api.spacexdata.com/v4/launches");
+  const response = await fetch('https://api.spacexdata.com/v4/launches');
   const data = await response.json();
-  return data;
+  return data.reverse();
 };
 
 export const getTenNews = async () => {
-  const response = await fetch("https://api.spacexdata.com/v4/launches");
+  const response = await fetch('https://api.spacexdata.com/v4/launches');
   const data = await response.json();
   const corte = data.slice(-10);
-  return corte;
+  return corte.reverse();
 };
