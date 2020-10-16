@@ -31,6 +31,10 @@ La página principal, marcada como "Last New" en la cabecera, muestra la última
 
 -Al acceder a los datos de la BBDD, algunas variables no se cargaban y daba errores. Se soluciono haciendo que tras obtener los datos se espere a que esten realmente cargados en el array o variable.
 -Algunas variables como el enlace a wikipedia o a youtube pueden estar vacios, por lo que tuvimos que hacer que al mostrar la noticia se compruebe si la variable tiene valor nulo, y en caso afirmativo no se mostrara en pantalla las etiquetas que debian mostrar el valor de dichas variables.
+-Las etiquetas para mostrar videos no funcionaban. Por ejemplo, al usar "iframe" daba un error debido a que youtube no permitia usarlo para mostrar sus videos en otras páginas. Afortunadamente encontramos una libreria que si funcionó, llamada "ReactPlayer".
+-Estuvimos adaptando el proyecto para que se pueda ver tambien en dispositivos moviles. Esto esta obligando a volver responsivos algunos elementos como las imagenes y los videos. Pero en el caso de los videos daba errores en los que se generaban margenes vacios, por lo que tuvimos que eliminar al final esto.
+
+Agradecimientos a Alexander Wheldon por sus aportaciones para solucionar los problemas.
 
 ## Wireframe
 

@@ -10,12 +10,7 @@ export const Informacion = (space) => {
   return (
     <article>
       {space.links.flickr.original[0] && (
-        <img
-          src={space.links.flickr.original[0]}
-          alt="Sin Foto"
-          width="250"
-          height="200px"
-        />
+        <img src={space.links.flickr.original[0]} alt="Sin Foto" />
       )}
       <h2>{space.name}</h2>
       <p>{space.details}</p>
@@ -35,15 +30,15 @@ export const Informacion = (space) => {
         )}
       </ul>
       {space.links.webcast && (
-        <div className="player-wrapper">
+        <>
           <h3>Video:</h3>
           <ReactPlayer
             url={space.links.webcast}
             className="react-player"
-            width="100%"
-            height="100%"
+            width="640px"
+            height="480px"
           />
-        </div>
+        </>
       )}
       {(space.links.reddit.campaign ||
         space.links.reddit.launch ||
