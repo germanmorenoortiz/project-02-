@@ -1,24 +1,37 @@
 article {
   flex: 1 auto;
   padding: 3rem;
-  border: 5px solid rgba(71, 106, 139, 0.75);
+  border: 5px solid rgba(71, 106, 139, 0.8);
   margin: 2rem;
-  background-color: rgba(71, 106, 139, 0.5);
+  background-color: rgba(71, 106, 139, 0.6);
 
   h2 {
     text-decoration: underline;
   }
 
   a:link {
-    color: rgb(0, 195, 255);
+    color: rgb(0, 200, 255);
   }
   a:visited {
-    color: rgb(0, 110, 255);
+    color: rgb(0, 175, 255);
   }
   a:hover {
-    color: rgb(0, 156, 204);
+    color: rgb(0, 150, 255);
   }
   a:active {
     color: azure;
   }
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56%;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 640px;
+  max-height: 480px;
 }

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { getAllNews, Informacion } from "../lib/api.js";
+import React, { useEffect, useState } from 'react';
+import { getAllNews, Informacion } from '../lib/api.js';
 
 const All = () => {
   const [pack, setPack] = useState([]);
