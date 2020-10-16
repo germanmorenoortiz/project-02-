@@ -26,3 +26,12 @@ Las 3 páginas empiezan con una cabecera, que contiene los enlaces a las página
 Y entre la cabecera y el pie, estarán las noticias. Ten en cuenta que la cabecera y el pie permaneceran en sus posiciones aunque el usuario descienda por la lista de las noticias.
 
 La página principal, marcada como "Last New" en la cabecera, muestra la última de las noticias que se ha publicado. El enlace "All News" lleva a un enlace con todas las noticias que se han ido publicando en la API. Finalmente tenemos la página del enlace "Last Ten News", la cual muestra una lista con las 10 últimas noticias que estuviesen en el array de la API.
+
+## Obstaculos que nos fuimos encontrando
+
+-Al acceder a los datos de la BBDD, algunas variables no se cargaban y daba errores. Se soluciono haciendo que tras obtener los datos se espere a que esten realmente cargados en el array o variable.
+-Algunas variables como el enlace a wikipedia o a youtube pueden estar vacios, por lo que tuvimos que hacer que al mostrar la noticia se compruebe si la variable tiene valor nulo, y en caso afirmativo no se mostrara en pantalla las etiquetas que debian mostrar el valor de dichas variables.
+
+## Wireframe
+
+![Screenshot](documentation/wireframe.png)

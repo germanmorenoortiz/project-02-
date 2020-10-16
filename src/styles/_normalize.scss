@@ -31,6 +31,17 @@ body {
 
 main {
   display: block;
+  h1 {
+    flex: 1 auto;
+    padding: 3rem;
+    border: 5px solid rgba(71, 106, 139, 0.8);
+    margin: 2rem;
+    background-color: rgba(71, 106, 139, 0.6);
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /**
@@ -48,17 +59,6 @@ h1 {
 
 /* Grouping content
    ========================================================================== */
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
