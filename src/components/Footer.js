@@ -1,9 +1,12 @@
-import React from "react";
+import React from 'react';
 
 const Footer = () => {
   return (
     <footer>
-      <p>Information provide by SpaceX</p>
+      <p>
+        Information provide by SpaceX. Created by Daniel Pareja, Diego Muñoz and
+        German Moreno.
+      </p>
     </footer>
   );
 };
